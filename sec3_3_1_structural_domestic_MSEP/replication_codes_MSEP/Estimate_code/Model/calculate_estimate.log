@@ -1,0 +1,546 @@
+Starting Dynare (version 5.5).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Substitution of endo leads >= 2: added 46 auxiliary variables and equations.
+Substitution of endo lags >= 2: added 16 auxiliary variables and equations.
+Substitution of exo lags: added 3 auxiliary variables and equations.
+Found 174 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : 1
+Equation number 2 : 0 : zynomin
+Equation number 3 : 0 : inflsae_core_nt
+Equation number 4 : 0 : zinflsae_core_nt
+Equation number 5 : 0 : inflsae_core_t
+Equation number 6 : 0 : zinflsae_core_t
+Equation number 7 : 0 : inflsae_resto
+Equation number 8 : 0 : zinflsae_resto
+Equation number 9 : 0 : inflsae_core
+Equation number 10 : 0 : inflsae
+Equation number 11 : 0 : inflIPC
+Equation number 12 : 0 : inflsae_core_anual
+Equation number 13 : 0 : inflsaeanual
+Equation number 14 : 0 : 14
+Equation number 15 : 0 : zi
+Equation number 16 : 0 : 16
+Equation number 17 : 0 : d_Ypot
+Equation number 18 : 0 : G
+Equation number 19 : 0 : d_Y_anual
+Equation number 20 : 0 : U
+Equation number 21 : 0 : Ubar
+Equation number 22 : 0 : gUbar
+Equation number 23 : 0 : u
+Equation number 24 : 0 : zu
+Equation number 25 : 0 : infla
+Equation number 26 : 0 : zinfla
+Equation number 27 : 0 : d_pmoil_mepco
+Equation number 28 : 0 : infle
+Equation number 29 : 0 : zinfle
+Equation number 30 : 0 : inflIPC4
+Equation number 31 : 0 : 31
+Equation number 32 : 0 : rlp
+Equation number 33 : 0 : bcu5
+Equation number 34 : 0 : bcu10
+Equation number 35 : 0 : delta_i
+Equation number 36 : 0 : delta_i_ext
+Equation number 37 : 0 : 37
+Equation number 38 : 0 : rer
+Equation number 39 : 0 : rer_pot
+Equation number 40 : 0 : drer_gap
+Equation number 41 : 0 : rer_gap
+Equation number 42 : 0 : 42
+Equation number 43 : 0 : zrlp
+Equation number 44 : 0 : rn
+Equation number 45 : 0 : zrn
+Equation number 46 : 0 : in
+Equation number 47 : 0 : i_desv
+Equation number 48 : 0 : drerus
+Equation number 49 : 0 : de
+Equation number 50 : 0 : rUSTbill90
+Equation number 51 : 0 : zdeus
+Equation number 52 : 0 : deusrm
+Equation number 53 : 0 : zdeusrm
+Equation number 54 : 0 : yx_emer
+Equation number 55 : 0 : zyx_emer
+Equation number 56 : 0 : yx_avan
+Equation number 57 : 0 : zyx_avan
+Equation number 58 : 0 : iUSTbill90
+Equation number 59 : 0 : ziUSTbill90
+Equation number 60 : 0 : embi_ch
+Equation number 61 : 0 : inflCPIUS
+Equation number 62 : 0 : zinflCPIUS
+Equation number 63 : 0 : inflnoUS
+Equation number 64 : 0 : zinflnoUS
+Equation number 65 : 0 : zembi_ch
+Equation number 66 : 0 : tdi
+Equation number 67 : 0 : tdi_fun
+Equation number 68 : 0 : px_fun
+Equation number 69 : 0 : pm_fun
+Equation number 70 : 0 : px_pcu_fun
+Equation number 71 : 0 : px_pnpcu_fun
+Equation number 72 : 0 : pm_oil_fun
+Equation number 73 : 0 : pm_pnoil_fun
+Equation number 74 : 0 : px
+Equation number 75 : 0 : px_pcu
+Equation number 76 : 0 : px_pnpcu
+Equation number 77 : 0 : zpx_pnpcu
+Equation number 78 : 0 : pm
+Equation number 79 : 0 : pm_oil
+Equation number 80 : 0 : pm_pnoil
+Equation number 81 : 0 : zpm_pnoil
+Equation number 82 : 0 : pcu
+Equation number 83 : 0 : pmoil
+Equation number 84 : 0 : zpmoil
+Equation number 85 : 0 : dtdi
+Equation number 86 : 0 : dpx
+Equation number 87 : 0 : dpx_pcu
+Equation number 88 : 0 : dpx_pnpcu
+Equation number 89 : 0 : dpm
+Equation number 90 : 0 : dpm_oil
+Equation number 91 : 0 : dpm_pnoil
+Equation number 92 : 0 : inflIPE
+Equation number 93 : 0 : GROWTH_EY0
+Equation number 94 : 0 : GROWTH_EY1
+Equation number 95 : 0 : GROWTH_EY2
+Equation number 96 : 0 : GROWTH_EY1LR
+Equation number 97 : 0 : GROWTH_EY2LR
+Equation number 98 : 0 : GROWTH_EY3LR
+Equation number 99 : 0 : GROWTH_EY4LR
+Equation number 100 : 0 : GROWTH_EY5LR
+Equation number 101 : 0 : GROWTH_EY6TO10LR
+Equation number 102 : 0 : PIE_EY0
+Equation number 103 : 0 : PIE_EY1
+Equation number 104 : 0 : 104
+Equation number 105 : 0 : inflsae_2
+Equation number 106 : 0 : Alimentos
+Equation number 107 : 0 : Energia
+Equation number 108 : 0 : IPC
+Equation number 109 : 0 : sum_inflUS
+
+
+
+STEADY-STATE RESULTS:
+
+dYnomin            		 0.00825
+d_Ypot             		 0.00825
+G                  		 0.00825
+d_Y_anual          		 0.033
+ynomin             		 0
+inflIPC            		 0
+inflIPC4           		 0
+inflsae            		 0
+inflsae_core       		 0
+inflsae_core_nt    		 0
+inflsae_core_t     		 0
+inflsae_resto      		 0
+inflsae_core_anual 		 0
+inflsaeanual       		 0
+infle              		 0
+infla              		 0
+Ubar               		 0.081
+u                  		 0
+U                  		 0.081
+gUbar              		 0
+Ubar_total         		 0.081
+zu                 		 0
+i                  		 0.04
+in                 		 0.04
+rlp                		 0
+bcu5               		 0
+bcu10              		 0
+rn                 		 0.01
+r                  		 0.01
+i_desv             		 0
+rer                		 0
+deus               		 0
+drerus             		 0
+deusrm             		 0
+de                 		 0
+drer               		 0
+yx_avan            		 0
+yx_emer            		 0
+iUSTbill90         		 0
+rUSTbill90         		 0
+inflCPIUS          		 0
+inflIPE            		 0
+inflnoUS           		 0
+embi_ch            		 0
+sum_inflUS         		 0
+tdi                		 0
+pcu                		 0
+pmoil              		 0
+px                 		 0
+px_pcu             		 0
+px_pnpcu           		 0
+pm                 		 0
+pm_oil             		 0
+pm_pnoil           		 0
+dtdi               		 0
+dpx                		 0
+dpx_pcu            		 0
+dpx_pnpcu          		 0
+dpm                		 0
+dpm_oil            		 0
+dpm_pnoil          		 0
+tdi_fun            		 0
+px_fun             		 0
+pm_fun             		 0
+px_pcu_fun         		 0
+px_pnpcu_fun       		 0
+pm_oil_fun         		 0
+pm_pnoil_fun       		 0
+delta_i            		 0
+delta_i_ext        		 0
+rer_gap            		 0
+rer_pot            		 0
+drer_gap           		 0
+d_pmoil_mepco      		 0
+zynomin            		 0
+zinfle             		 0
+zinfla             		 0
+zinflsae_core_nt   		 0
+zinflsae_core_t    		 0
+zinflsae_resto     		 0
+zi                 		 0
+zrn                		 0
+zrlp               		 0
+zdeus              		 0
+zdeusrm            		 0
+zyx_emer           		 0
+zyx_avan           		 0
+ziUSTbill90        		 0
+zembi_ch           		 0
+zinflCPIUS         		 0
+zinflnoUS          		 0
+zpx_pnpcu          		 0
+zpm_pnoil          		 0
+zpmoil             		 0
+GROWTH_EY0         		 0.033
+GROWTH_EY1         		 0.033
+GROWTH_EY2         		 0.033
+GROWTH_EY1LR       		 0.033
+GROWTH_EY2LR       		 0.033
+GROWTH_EY3LR       		 0.033
+GROWTH_EY4LR       		 0.033
+GROWTH_EY5LR       		 0.033
+GROWTH_EY6TO10LR   		 0.033
+PIE_EY0            		 0
+PIE_EY1            		 0
+inflsae_2          		 0
+Alimentos          		 0
+Energia            		 0
+IPC                		 0
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+Smoothed variables will be computed for the 109 endogenous variables
+of your model, this can take a long time ....
+
+
+Choose one of the following options:
+
+ [1] Consider all the endogenous variables.
+ [2] Consider all the observed endogenous variables.
+ [3] Stop Dynare and change the mod file.
+ [4] Consider all the endogenous and auxiliary variables.
+
+options [default is 1] =  1
+
+
+Initial value of the log posterior (or likelihood): 5794.0591
+                                            First-order      Norm of
+ Iter F-count            f(x)  Feasibility   optimality         step
+    0      68   -5.794059e+03    0.000e+00    1.034e+03
+    1     147   -5.794034e+03    0.000e+00    1.003e+03    3.561e-03
+    2     216   -5.794034e+03    0.000e+00    9.661e+02    2.582e-03
+    3     289   -5.794055e+03    0.000e+00    8.152e+02    7.225e-03
+    4     359   -5.794061e+03    0.000e+00    7.688e+02    3.791e-03
+    5     432   -5.794102e+03    0.000e+00    7.525e+02    1.562e-03
+Objective function returned Inf; trying a new point...
+    6     503   -5.794102e+03    0.000e+00    7.128e+02    1.178e-03
+    7     577   -5.794106e+03    0.000e+00    6.948e+02    8.343e-04
+    8     646   -5.794105e+03    0.000e+00    6.477e+02    1.207e-03
+    9     720   -5.794105e+03    0.000e+00    6.134e+02    5.558e-04
+   10     789   -5.794104e+03    0.000e+00    5.518e+02    1.096e-03
+   11     861   -5.794099e+03    0.000e+00    2.990e+02    2.485e-03
+   12     935   -5.794101e+03    0.000e+00    2.179e+02    8.603e-04
+   13    1005   -5.794101e+03    0.000e+00    2.009e+02    4.579e-04
+   14    1078   -5.794103e+03    0.000e+00    1.885e+02    5.004e-04
+   15    1148   -5.794102e+03    0.000e+00    1.530e+02    6.134e-04
+   16    1220   -5.794101e+03    0.000e+00    1.726e+01    1.176e-03
+   17    1298   -5.794103e+03    0.000e+00    3.291e+01    1.366e-03
+   18    1368   -5.794103e+03    0.000e+00    1.063e+02    8.778e-04
+   19    1440   -5.794109e+03    0.000e+00    8.567e+01    1.296e-03
+   20    1510   -5.794109e+03    0.000e+00    1.760e+02    2.830e-04
+   21    1583   -5.794110e+03    0.000e+00    4.520e+01    1.226e-03
+   22    1653   -5.794111e+03    0.000e+00    1.814e+02    5.269e-04
+   23    1726   -5.794114e+03    0.000e+00    1.197e+02    4.768e-04
+   24    1797   -5.794114e+03    0.000e+00    3.923e+01    4.277e-04
+   25    1869   -5.794115e+03    0.000e+00    2.482e+01    6.400e-04
+   26    1940   -5.794115e+03    0.000e+00    2.746e+01    2.762e-04
+   27    2012   -5.794116e+03    0.000e+00    1.674e+01    4.836e-04
+   28    2082   -5.794116e+03    0.000e+00    5.401e+01    2.721e-04
+   29    2154   -5.794117e+03    0.000e+00    5.911e+01    4.141e-04
+   30    2225   -5.794117e+03    0.000e+00    1.090e+02    2.016e-04
+
+                                            First-order      Norm of
+ Iter F-count            f(x)  Feasibility   optimality         step
+   31    2298   -5.794118e+03    0.000e+00    6.418e+00    2.132e-04
+   32    2369   -5.794118e+03    0.000e+00    2.614e+01    1.011e-04
+   33    2441   -5.794118e+03    0.000e+00    6.345e+00    2.226e-04
+   34    2511   -5.794118e+03    0.000e+00    2.536e+01    2.521e-04
+   35    2583   -5.794119e+03    0.000e+00    6.389e+00    5.153e-04
+   36    2654   -5.794119e+03    0.000e+00    1.393e+01    1.247e-04
+   37    2726   -5.794119e+03    0.000e+00    9.750e+00    2.591e-04
+   38    2797   -5.794119e+03    0.000e+00    1.042e+01    2.098e-04
+   39    2870   -5.794119e+03    0.000e+00    1.179e-01    2.004e-04
+   40    2951   -5.794119e+03    0.000e+00    4.247e+01    8.252e-04
+   41    3022   -5.794120e+03    0.000e+00    4.054e+01    3.448e-05
+   42    3094   -5.794120e+03    0.000e+00    2.433e+01    5.139e-04
+   43    3165   -5.794120e+03    0.000e+00    1.838e+01    5.622e-05
+   44    3237   -5.794120e+03    0.000e+00    6.494e+00    3.791e-04
+   45    3308   -5.794120e+03    0.000e+00    3.003e+01    4.785e-05
+   46    3380   -5.794120e+03    0.000e+00    2.095e+01    3.233e-04
+   47    3453   -5.794121e+03    0.000e+00    3.756e+00    3.629e-04
+   48    3524   -5.794121e+03    0.000e+00    3.526e+01    1.428e-04
+   49    3596   -5.794121e+03    0.000e+00    1.969e+01    3.542e-04
+   50    3668   -5.794121e+03    0.000e+00    1.952e+01    8.932e-04
+   51    3741   -5.794121e+03    0.000e+00    1.448e+01    5.186e-04
+   52    3812   -5.794121e+03    0.000e+00    3.812e+01    1.570e-04
+   53    3885   -5.794121e+03    0.000e+00    1.947e+01    1.798e-04
+   54    3956   -5.794121e+03    0.000e+00    1.025e+01    1.166e-04
+   55    4028   -5.794121e+03    0.000e+00    4.919e+00    2.421e-04
+   56    4099   -5.794121e+03    0.000e+00    8.186e+00    7.631e-05
+   57    4171   -5.794122e+03    0.000e+00    4.974e+00    2.335e-04
+   58    4243   -5.794122e+03    0.000e+00    4.445e+00    4.592e-04
+   59    4315   -5.794122e+03    0.000e+00    2.957e+01    9.764e-04
+   60    4386   -5.794122e+03    0.000e+00    2.944e+01    1.838e-04
+
+                                            First-order      Norm of
+ Iter F-count            f(x)  Feasibility   optimality         step
+   61    4458   -5.794122e+03    0.000e+00    5.571e+00    6.323e-04
+   62    4529   -5.794122e+03    0.000e+00    2.324e+01    1.909e-04
+   63    4601   -5.794122e+03    0.000e+00    1.010e+01    6.201e-04
+   64    4675   -5.794122e+03    0.000e+00    3.964e+00    3.777e-04
+   65    4746   -5.794122e+03    0.000e+00    9.006e+00    7.658e-05
+   66    4818   -5.794122e+03    0.000e+00    8.608e+00    2.777e-04
+   67    4890   -5.794122e+03    0.000e+00    6.967e+00    4.707e-04
+   68    4963   -5.794122e+03    0.000e+00    8.408e+00    5.399e-04
+   69    5037   -5.794122e+03    0.000e+00    7.214e+00    3.591e-04
+   70    5110   -5.794122e+03    0.000e+00    2.901e+00    2.255e-04
+   71    5180   -5.794122e+03    0.000e+00    7.729e+00    1.055e-04
+   72    5252   -5.794122e+03    0.000e+00    7.709e+00    1.586e-04
+   73    5325   -5.794122e+03    0.000e+00    5.817e+00    2.202e-04
+   74    5397   -5.794122e+03    0.000e+00    1.510e+01    4.370e-04
+   75    5471   -5.794122e+03    0.000e+00    1.158e+01    3.758e-04
+   76    5542   -5.794122e+03    0.000e+00    1.119e+01    5.414e-05
+   77    5614   -5.794122e+03    0.000e+00    7.075e+00    3.227e-04
+   78    5684   -5.794122e+03    0.000e+00    5.662e+00    5.679e-05
+   79    5756   -5.794122e+03    0.000e+00    1.695e+01    1.815e-04
+   80    5827   -5.794122e+03    0.000e+00    1.702e+01    1.010e-04
+   81    5899   -5.794122e+03    0.000e+00    2.036e+01    2.417e-04
+   82    5969   -5.794122e+03    0.000e+00    2.003e+01    5.711e-05
+   83    6041   -5.794122e+03    0.000e+00    2.365e+00    3.561e-04
+   84    6112   -5.794122e+03    0.000e+00    4.916e+00    4.394e-05
+   85    6184   -5.794122e+03    0.000e+00    1.247e+01    3.585e-04
+   86    6253   -5.794122e+03    0.000e+00    2.072e+01    9.493e-05
+   87    6326   -5.794122e+03    0.000e+00    1.093e+01    2.262e-04
+   88    6396   -5.794122e+03    0.000e+00    7.561e+00    1.060e-04
+   89    6468   -5.794122e+03    0.000e+00    5.509e+00    2.530e-04
+   90    6538   -5.794122e+03    0.000e+00    1.343e+01    1.187e-04
+
+                                            First-order      Norm of
+ Iter F-count            f(x)  Feasibility   optimality         step
+   91    6611   -5.794122e+03    0.000e+00    1.700e+01    3.820e-04
+   92    6682   -5.794122e+03    0.000e+00    1.605e+01    6.397e-05
+   93    6754   -5.794122e+03    0.000e+00    3.911e+00    3.671e-04
+   94    6824   -5.794122e+03    0.000e+00    5.132e+00    7.648e-05
+   95    6896   -5.794122e+03    0.000e+00    6.086e+00    2.284e-04
+   96    6967   -5.794122e+03    0.000e+00    6.603e+00    1.360e-04
+   97    7039   -5.794122e+03    0.000e+00    2.010e+01    3.160e-04
+   98    7109   -5.794122e+03    0.000e+00    2.289e+01    1.193e-04
+   99    7181   -5.794122e+03    0.000e+00    3.606e+00    3.131e-04
+  100    7252   -5.794122e+03    0.000e+00    2.489e+00    1.211e-04
+  101    7324   -5.794122e+03    0.000e+00    5.279e+00    3.181e-04
+  102    7394   -5.794122e+03    0.000e+00    1.459e+01    1.699e-04
+  103    7466   -5.794122e+03    0.000e+00    1.146e+01    5.941e-04
+  104    7537   -5.794122e+03    0.000e+00    1.104e+01    1.038e-04
+  105    7609   -5.794122e+03    0.000e+00    3.399e+00    4.803e-04
+  106    7680   -5.794122e+03    0.000e+00    7.179e+00    6.807e-05
+  107    7752   -5.794122e+03    0.000e+00    9.324e-01    3.588e-04
+  108    7823   -5.794122e+03    0.000e+00    5.737e+00    1.253e-04
+  109    7895   -5.794122e+03    0.000e+00    1.911e+00    4.134e-04
+  110    7969   -5.794122e+03    0.000e+00    2.492e+00    2.610e-04
+  111    8040   -5.794122e+03    0.000e+00    2.685e+00    8.822e-05
+  112    8112   -5.794122e+03    0.000e+00    2.838e+00    1.654e-04
+  113    8181   -5.794122e+03    0.000e+00    6.246e+00    2.487e-04
+  114    8254   -5.794122e+03    0.000e+00    4.855e+00    3.538e-04
+  115    8325   -5.794122e+03    0.000e+00    6.386e+00    8.484e-05
+  116    8398   -5.794122e+03    0.000e+00    5.757e+00    2.207e-04
+  117    8467   -5.794122e+03    0.000e+00    9.040e+00    1.720e-04
+  118    8541   -5.794122e+03    0.000e+00    8.020e+00    1.975e-04
+  119    8610   -5.794122e+03    0.000e+00    6.776e+00    2.276e-04
+  120    8683   -5.794122e+03    0.000e+00    4.224e+00    3.269e-04
+
+                                            First-order      Norm of
+ Iter F-count            f(x)  Feasibility   optimality         step
+  121    8753   -5.794122e+03    0.000e+00    4.191e+00    1.148e-04
+  122    8826   -5.794123e+03    0.000e+00    3.698e+00    2.320e-04
+  123    8895   -5.794123e+03    0.000e+00    2.335e+00    1.718e-04
+  124    8970   -5.794123e+03    0.000e+00    2.139e+00    1.138e-04
+  125    9039   -5.794123e+03    0.000e+00    1.391e+00    9.892e-05
+  126    9113   -5.794123e+03    0.000e+00    9.064e-02    1.160e-04
+  127    9184   -5.794123e+03    0.000e+00    5.961e-01    3.060e-05
+  128    9256   -5.794123e+03    0.000e+00    1.407e+00    1.094e-04
+  129    9325   -5.794123e+03    0.000e+00    8.594e-01    1.045e-04
+  130    9399   -5.794123e+03    0.000e+00    6.541e-01    1.136e-04
+  131    9469   -5.794123e+03    0.000e+00    7.791e-01    6.924e-05
+  132    9543   -5.794123e+03    0.000e+00    2.816e-01    5.384e-05
+  133    9613   -5.794123e+03    0.000e+00    1.123e+00    3.949e-05
+  134    9685   -5.794123e+03    0.000e+00    1.833e-01    6.809e-05
+  135    9755   -5.794123e+03    0.000e+00    3.685e-01    6.628e-05
+  136    9829   -5.794123e+03    0.000e+00    3.306e-01    4.834e-05
+  137    9900   -5.794123e+03    0.000e+00    3.162e-01    2.091e-05
+  138    9972   -5.794123e+03    0.000e+00    1.078e-01    4.552e-05
+  139   10041   -5.794123e+03    0.000e+00    8.030e-01    2.481e-05
+  140   10114   -5.794123e+03    0.000e+00    6.160e-01    5.555e-05
+  141   10185   -5.794123e+03    0.000e+00    5.051e-01    1.538e-05
+  142   10257   -5.794123e+03    0.000e+00    2.905e-02    3.485e-05
+  143   10332   -5.794123e+03    0.000e+00    2.661e-02    1.864e-05
+  144   10401   -5.794123e+03    0.000e+00    1.570e-01    2.735e-05
+  145   10475   -5.794123e+03    0.000e+00    1.089e-01    2.453e-05
+  146   10545   -5.794123e+03    0.000e+00    2.978e-01    1.759e-05
+  147   10619   -5.794123e+03    0.000e+00    1.011e-03    1.363e-05
+  148   10689   -5.794123e+03    0.000e+00    4.474e-01    5.682e-06
+  149   10759   -5.794123e+03    0.000e+00    1.122e+00    2.401e-05
+  150   10828   -5.794123e+03    0.000e+00    1.048e+00    2.156e-05
+
+                                            First-order      Norm of
+ Iter F-count            f(x)  Feasibility   optimality         step
+  151   10897   -5.794123e+03    0.000e+00    4.152e-01    1.082e-05
+  152   10967   -5.794123e+03    0.000e+00    9.572e-02    7.345e-06
+  153   11036   -5.794123e+03    0.000e+00    5.736e-02    1.019e-05
+  154   11104   -5.794123e+03    0.000e+00    3.483e-02    1.173e-05
+  155   11173   -5.794123e+03    0.000e+00    5.086e-02    7.855e-06
+  156   11242   -5.794123e+03    0.000e+00    7.375e-02    7.624e-06
+  157   11312   -5.794123e+03    0.000e+00    5.464e-02    3.824e-06
+
+<a href = "matlab: helpview('optim','feasible_better_objective','CSHelpWindow');">Feasible point with lower objective function value found</a>.
+
+
+<a href = "matlab: helpview('optim','local_min_poss_with_constr','CSHelpWindow');">Local minimum possible. Constraints satisfied</a>.
+
+fmincon stopped because the <a href = "matlab: helpview('optim','norm_curr_step_simple_fminconip','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a> and constraints are 
+satisfied to within the value of the <a href = "matlab: helpview('optim','constraint_tolerance','CSHelpWindow');">constraint tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sqpLineSearch:Exit2basic','fmincon'},{'optimlib:sqpLineSearch:Exit2detailed','1.000000e-06','0.000000e+00','1.000000e-06'},true,true);;">stopping criteria details</a>>
+
+Final value of minus the log posterior (or likelihood):-5794.122511 
+
+POSTERIOR KERNEL OPTIMIZATION PROBLEM!
+ (minus) the hessian matrix at the "mode" is not positive definite!
+=> posterior variance of the estimated parameters are not positive.
+You should try to change the initial values of the parameters using
+the estimated_params_init block, or use another optimization routine.
+[Warning: The results below are most likely wrong!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\5.5\matlab\dynare_estimation_1.m', 318)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\5.5\matlab\dynare_estimation_1.m',318,0)">line 318</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\5.5\matlab\dynare_estimation.m', 118)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\5.5\matlab\dynare_estimation.m',118,0)">line 118</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('calculate_estimate.driver', 'C:\Users\Usuario\Documents\Github\DGSE\sec3_3_1_structural_domestic_MSEP\replication_codes_MSEP\Estimate_code\Model\+calculate_estimate\driver.m', 2271)" style="font-weight:bold">calculate_estimate.driver</a> (<a href="matlab: opentoline('C:\Users\Usuario\Documents\Github\DGSE\sec3_3_1_structural_domestic_MSEP\replication_codes_MSEP\Estimate_code\Model\+calculate_estimate\driver.m',2271,0)">line 2271</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\5.5\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\5.5\matlab\dynare.m',281,0)">line 281</a>)] 
+[Warning: Matrix is singular, close to singular or badly scaled. Results may be inaccurate. RCOND = NaN.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\5.5\matlab\dynare_estimation_1.m', 341)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\5.5\matlab\dynare_estimation_1.m',341,0)">line 341</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\5.5\matlab\dynare_estimation.m', 118)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\5.5\matlab\dynare_estimation.m',118,0)">line 118</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('calculate_estimate.driver', 'C:\Users\Usuario\Documents\Github\DGSE\sec3_3_1_structural_domestic_MSEP\replication_codes_MSEP\Estimate_code\Model\+calculate_estimate\driver.m', 2271)" style="font-weight:bold">calculate_estimate.driver</a> (<a href="matlab: opentoline('C:\Users\Usuario\Documents\Github\DGSE\sec3_3_1_structural_domestic_MSEP\replication_codes_MSEP\Estimate_code\Model\+calculate_estimate\driver.m',2271,0)">line 2271</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\5.5\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\5.5\matlab\dynare.m',281,0)">line 281</a>)
+] 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+                     prior mean     mode    s.d.  prior pstdev
+
+a1                       0.1500   0.1363     NaN   beta 0.0400 
+a2                       0.0500   0.0522     NaN   beta 0.0300 
+a3                       0.0700   0.0505     NaN   beta 0.0200 
+a4                       0.0700   0.0523     NaN   beta 0.0200 
+a5                       0.0600   0.0439     NaN   beta 0.0200 
+a6                       0.0100   0.0069     NaN   beta 0.0050 
+a7                       0.0400   0.0114     NaN   beta 0.0200 
+rhoyresto                0.4000   0.3130     NaN   beta 0.1000 
+bnt1                     0.2000   0.1563     NaN   beta 0.0500 
+bnt2                     0.5000   0.4855     NaN   beta 0.1500 
+bnt3                     0.1000   0.0732     NaN   beta 0.0250 
+rho_zinflsae_core_nt     0.2000   0.1174     NaN   beta 0.1000 
+bt2                      0.7000   0.6377     NaN   beta 0.0750 
+bt3                      0.0200   0.0202     NaN   beta 0.0050 
+bt4                      0.0500   0.0388     NaN   beta 0.0100 
+bt5                      0.0200   0.0169     NaN   beta 0.0050 
+br1                      0.1000   0.1014     NaN   beta 0.0250 
+br2                      0.0500   0.0437     NaN   beta 0.0100 
+rho_inflsae_resto        0.5000   0.1714     NaN   beta 0.1800 
+rho_zinflsae_resto       0.2500   0.2295     NaN   beta 0.1800 
+std_Ubar                 0.0070   0.0012     NaN   invg    Inf 
+c3                       0.2000   0.2074     NaN   gamm 0.0500 
+c2                       1.7000   1.6283     NaN   norm 0.1000 
+c1                       0.8000   0.7973     NaN   beta 0.0500 
+rho1_yx_emer             0.8500   0.8679     NaN   beta 0.1000 
+rho1_yx_avan             0.8500   0.8989     NaN   beta 0.1000 
+rho1_embi_ch             0.7000   0.7851     NaN   beta 0.1000 
+rho1_inflnoUS            0.2500   0.2649     NaN   beta 0.1800 
+rho1_inflCPIUS           0.2500   0.0709     NaN   beta 0.1800 
+rho_pcu                  0.5000   0.7704     NaN   beta 0.1000 
+rho1_pmoil               0.6300   0.8142     NaN   beta 0.1500 
+rho_zpx_pnpcu            0.5000   0.5653     NaN   beta 0.1000 
+rho_zpm_pnoil            0.5000   0.4213     NaN   beta 0.1000 
+gap_infla                0.2500   0.3286     NaN   beta 0.1000 
+rho_infla                0.2500   0.3191     NaN   beta 0.1000 
+tita                     0.3500   0.2261     NaN   beta 0.0700 
+rhodeus                  0.3500   0.6330     NaN   beta 0.1000 
+
+standard deviation of shocks
+                     prior mean     mode    s.d.  prior pstdev
+
+zzsae_core_nt            0.0070   0.0015     NaN   invg    Inf 
+zzsae_core_nt_s          0.0070   0.0016     NaN   invg    Inf 
+zzsae_core_t             0.0070   0.0029     NaN   invg    Inf 
+zzsae_core_t_s           0.0070   0.0021     NaN   invg    Inf 
+zzsae_resto              0.0070   0.0092     NaN   invg    Inf 
+zzsae_resto_s            0.0070   0.0037     NaN   invg    Inf 
+zzIPCSAE                 0.0070   0.0015     NaN   invg    Inf 
+zzIPCSAEcore             0.0070   0.0009     NaN   invg    Inf 
+zzinflIPC                0.0070   0.0013     NaN   invg    Inf 
+zzUbar                   0.0070   0.0032     NaN   invg    Inf 
+zzynomin                 0.0070   0.0060     NaN   invg    Inf 
+zzi                      0.0070   0.0070     NaN   invg    Inf 
+zzdeus                   0.0080   0.0121     NaN   invg    Inf 
+zzinfla                  0.0070   0.0107     NaN   invg    Inf 
+zzinfle                  0.0070   0.0032     NaN   invg    Inf 
+zzyx_emer                0.0070   0.0133     NaN   invg    Inf 
+zzyx_avan                0.0070   0.0091     NaN   invg    Inf 
+zziUSTbill90             0.0070   0.0044     NaN   invg    Inf 
+zzembi_ch                0.0070   0.0031     NaN   invg    Inf 
+zzinflCPIUS              0.0070   0.0032     NaN   invg    Inf 
+zzinflIPE                0.0070   0.0323     NaN   invg    Inf 
+zzpcu                    0.0070   0.1418     NaN   invg    Inf 
+zzpmoil                  0.0070   0.1380     NaN   invg    Inf 
+zzpx                     0.0070   0.0121     NaN   invg    Inf 
+zzpx_pcu                 0.0070   0.0799     NaN   invg    Inf 
+zzpx_pnpcu               0.0070   0.0304     NaN   invg    Inf 
+zzpm                     0.0070   0.0258     NaN   invg    Inf 
+zzpm_oil                 0.0070   0.0826     NaN   invg    Inf 
+zzpm_pnoil               0.0070   0.0338     NaN   invg    Inf 
+zzmepco                  0.0070   0.0368     NaN   invg    Inf 
+
+
+Log data density [Laplace approximation] is NaN.
+

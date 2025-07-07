@@ -1,0 +1,16 @@
+# Ignorar todo por defecto
+*
+
+# Permitir solo estas carpetas específicas
+!src/
+!src/**
+!datos/
+!datos/**
+!sec3_3_1_structural_domestic_MSEP/
+!sec3_3_1_structural_domestic_MSEP/**
+
+# Permitir el archivo .gitignore
+!.gitignore
+
+# Opcional: permitir README si tienes uno
+!README.md
