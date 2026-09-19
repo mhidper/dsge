@@ -1,0 +1,355 @@
+# Catálogo de series del modelo Semi-DSGE para España.
+#
+# Fuente de verdad legible y versionable en git. `almacen.py` la sincroniza
+# con la tabla `catalogo` de la base (sync_catalogo) para que quede
+# consultable por SQL junto a las observaciones. Los conectores de
+# ingesta (fase 2) leen aquí el identificador en origen; el ensamblado
+# (fase 3) lee aquí la agregación, la transformación y la columna de
+# destino en el DataFrame del modelo.
+#
+# Vocabulario de 'transformacion': ver esquema.sql. 'agregacion' se aplica
+# ANTES que 'transformacion' cuando la frecuencia de origen no es trimestral.
+#
+# id_origen "PENDIENTE:<motivo>" marca series cuyo conector de la fase 2
+# aún no está escrito o cuyo identificador exacto no se ha resuelto.
+# El pipeline actual (data_pipeline.py) sigue siendo la fuente real
+# hasta que cada conector quede implementado y pase la prueba de paridad.
+
+series:
+
+  # --------------------------------------------------------------
+  # 1. Actividad y PIB — INE (Contabilidad Nacional Trimestral)
+  # --------------------------------------------------------------
+  - serie_id: ine_pib_real_espana
+    descripcion: PIB a precios de mercado, España, índice de volumen encadenado, CVEC
+    proveedor: INE
+    id_origen: "Tabla Tempus3 67822 (PIB pm Oferta, índices de volumen encadenado, CNTR). Serie identificada 2026-09-19 por texto (no por código tv): Nombre con 'producto interior bruto a precios de mercado'+'dato base'+'encadenad'+'ajustados de estacionalidad', excluyendo 'no ajustados'."
+    unidad: "Índice CVEC base 2015=100 (se reescala a M€ en el ensamblado)"
+    frecuencia_origen: Q
+    agregacion: null
+    transformacion: nivel
+    columna_modelo: gdp_real_spain
+    calendario_publicacion: "Avance a finales del 1er mes tras el cierre del trimestre; dato completo a finales del 2º mes"
+    retraso_maximo_dias: 70
+    notas: >
+      Reemplaza a pib_real_cvec_indice.csv. El factor de escala a millones de
+      euros se sigue calculando en el ensamblado igual que hoy en
+      data_pipeline.py::_scale_cvec_to_millions, pero contra el propio
+      histórico del INE en vez de contra el CSV manual.
+
+  # --------------------------------------------------------------
+  # 2. Mercado laboral — INE (EPA)
+  # --------------------------------------------------------------
+  - serie_id: ine_epa_tasa_paro
+    descripcion: Tasa de paro, población 16 y más años, España
+    proveedor: INE
+    id_origen: "Tabla Tempus3 65219 (Tasas de paro por sexo y edad, EPA). Serie identificada 2026-09-19 por texto: Nombre con 'ambos sexos. total' (edad=Total, no un grupo de edad)."
+    unidad: "% población activa"
+    frecuencia_origen: Q
+    agregacion: null
+    transformacion: nivel
+    columna_modelo: unemployment_rate
+    calendario_publicacion: "Últimos días de abril/julio/octubre/enero"
+    retraso_maximo_dias: 100
+    notas: Reemplaza a empleo_epa_2002_2026T2.csv.
+
+  - serie_id: ine_epa_ocupados
+    descripcion: Personas ocupadas, España
+    proveedor: INE
+    id_origen: "Tabla Tempus3 65109 (Ocupados por sexo y edad, EPA). Serie identificada 2026-09-19 por texto: Nombre con 'ambos sexos. total'+'valor absoluto' (niveles, no porcentaje)."
+    unidad: Miles de personas
+    frecuencia_origen: Q
+    agregacion: null
+    transformacion: nivel
+    columna_modelo: employment_persons
+    calendario_publicacion: "Últimos días de abril/julio/octubre/enero"
+    retraso_maximo_dias: 100
+
+  - serie_id: ine_epa_activos
+    descripcion: Población activa, España
+    proveedor: INE
+    id_origen: "Tabla Tempus3 65080 (Activos por sexo y edad, EPA). Serie identificada 2026-09-19 por texto: Nombre con 'ambos sexos. total'+'valor absoluto'."
+    unidad: Miles de personas
+    frecuencia_origen: Q
+    agregacion: null
+    transformacion: nivel
+    columna_modelo: active
+    calendario_publicacion: "Últimos días de abril/julio/octubre/enero"
+    retraso_maximo_dias: 100
+    notas: Insumo del cálculo de PIB potencial por función de producción (potential.py), no entra directo en las ecuaciones.
+
+  - serie_id: ine_epa_pob16mas
+    descripcion: Población de 16 y más años, España
+    proveedor: INE
+    id_origen: "Tabla Tempus3 65063 (Población por sexo, edad, relación y estado civil, EPA). Serie identificada 2026-09-19 por texto: gran total con 'ambos sexos. total. total. total'+'valor absoluto'."
+    unidad: Miles de personas
+    frecuencia_origen: Q
+    agregacion: null
+    transformacion: nivel
+    columna_modelo: pop_16plus
+    calendario_publicacion: "Últimos días de abril/julio/octubre/enero"
+    retraso_maximo_dias: 100
+    notas: Insumo de potential.py (ritmo migratorio vía crecimiento de la población en edad de trabajar).
+
+  # --------------------------------------------------------------
+  # 3. Precios — INE (IPC, tabla 76130, ya validada en el sandbox)
+  # --------------------------------------------------------------
+  - serie_id: ine_ipc_general
+    descripcion: IPC general, España, índice mensual
+    proveedor: INE
+    id_origen: "Tabla Tempus3 76130 (confirmada, ya en uso vía ipc_mensual_ine_76130.csv)"
+    unidad: Índice
+    frecuencia_origen: M
+    agregacion: media
+    transformacion: yoy_4
+    columna_modelo: inflation_total
+    calendario_publicacion: "~día 13 del mes siguiente"
+    retraso_maximo_dias: 45
+
+  - serie_id: ine_ipc_subyacente
+    descripcion: IPC subyacente (sin alimentos no elaborados ni energía)
+    proveedor: INE
+    id_origen: "Tabla Tempus3 76130"
+    unidad: Índice
+    frecuencia_origen: M
+    agregacion: media
+    transformacion: yoy_4
+    columna_modelo: inflation_core
+    calendario_publicacion: "~día 13 del mes siguiente"
+    retraso_maximo_dias: 45
+
+  - serie_id: ine_ipc_servicios
+    descripcion: IPC servicios
+    proveedor: INE
+    id_origen: "Tabla Tempus3 76130"
+    unidad: Índice
+    frecuencia_origen: M
+    agregacion: media
+    transformacion: yoy_4
+    columna_modelo: inflation_services
+    calendario_publicacion: "~día 13 del mes siguiente"
+    retraso_maximo_dias: 45
+
+  - serie_id: ine_ipc_bienes_industriales
+    descripcion: IPC bienes industriales (sin productos energéticos)
+    proveedor: INE
+    id_origen: "Tabla Tempus3 76130"
+    unidad: Índice
+    frecuencia_origen: M
+    agregacion: media
+    transformacion: yoy_4
+    columna_modelo: inflation_goods
+    calendario_publicacion: "~día 13 del mes siguiente"
+    retraso_maximo_dias: 45
+
+  - serie_id: ine_ipc_alimentos
+    descripcion: IPC alimentos elaborados y frescos
+    proveedor: INE
+    id_origen: "Tabla Tempus3 76130"
+    unidad: Índice
+    frecuencia_origen: M
+    agregacion: media
+    transformacion: yoy_4
+    columna_modelo: inflation_food
+    calendario_publicacion: "~día 13 del mes siguiente"
+    retraso_maximo_dias: 45
+
+  - serie_id: ine_ipc_energia
+    descripcion: IPC productos energéticos
+    proveedor: INE
+    id_origen: "Tabla Tempus3 76130"
+    unidad: Índice
+    frecuencia_origen: M
+    agregacion: media
+    transformacion: yoy_4
+    columna_modelo: inflation_energy
+    calendario_publicacion: "~día 13 del mes siguiente"
+    retraso_maximo_dias: 45
+
+  # --------------------------------------------------------------
+  # 4. Entorno exterior — Eurostat / FRED
+  # --------------------------------------------------------------
+  - serie_id: eurostat_hicp_ea20
+    descripcion: IPCA armonizado, Eurozona (EA20), variación interanual
+    proveedor: EUROSTAT
+    id_origen: "prc_hicp_manr, geo=EA20, unit=RCH_A, coicop=CP00"
+    unidad: "% interanual"
+    frecuencia_origen: M
+    agregacion: media
+    transformacion: nivel
+    columna_modelo: inflation_eu
+    calendario_publicacion: "Dato provisional a mes vencido (~día 17), definitivo al mes siguiente"
+    retraso_maximo_dias: 50
+
+  - serie_id: eurostat_hicp_indice_ea20
+    descripcion: IPCA armonizado, Eurozona (EA20), índice en nivel (base 2015=100)
+    proveedor: EUROSTAT
+    id_origen: "prc_hicp_midx, geo=EA20, unit=I15, coicop=CP00"
+    unidad: "Índice 2015=100"
+    frecuencia_origen: M
+    agregacion: media
+    transformacion: nivel
+    columna_modelo: null
+    calendario_publicacion: "Mensual, a mes vencido"
+    retraso_maximo_dias: 50
+    notas: Insumo de real_exchange_rate/reer_gap (nivel de precios relativo España/UE); se combina con ine_ipc_general.
+
+  - serie_id: eurostat_pib_eurozona
+    descripcion: PIB real, Eurozona (EA20), volumen encadenado, CVEC
+    proveedor: EUROSTAT
+    id_origen: "namq_10_gdp, geo=EA20, na_item=B1GQ, s_adj=SCA, unit=CLV10_MEUR"
+    unidad: Millones EUR, precios constantes
+    frecuencia_origen: Q
+    agregacion: null
+    transformacion: hp_gap_ln
+    columna_modelo: output_gap_eu
+    calendario_publicacion: "Avance ~45 días tras cierre; revisión a los 65 días"
+    retraso_maximo_dias: 100
+    notas: Sustituye al filtro HP sobre PIB Alemania como proxy; ahora se usa el PIB de la Eurozona directamente.
+
+  - serie_id: fred_pib_usa
+    descripcion: PIB real, Estados Unidos, encadenado 2017
+    proveedor: FRED
+    id_origen: GDPC1
+    unidad: "Miles de millones USD, 2017"
+    frecuencia_origen: Q
+    agregacion: null
+    transformacion: hp_gap_ln
+    columna_modelo: output_gap_usa
+    calendario_publicacion: "Avance a finales del mes siguiente al cierre"
+    retraso_maximo_dias: 100
+
+  - serie_id: fred_pib_china
+    descripcion: PIB real, China
+    proveedor: FRED
+    id_origen: "PENDIENTE:decidir entre serie FRED derivada o extracción directa de OCDE QNA (China no reporta con la puntualidad de OCDE/FRED)"
+    unidad: Índice o nivel, por decidir
+    frecuencia_origen: Q
+    agregacion: null
+    transformacion: hp_gap_ln
+    columna_modelo: output_gap_china
+    calendario_publicacion: "Variable; China publica con retraso irregular"
+    retraso_maximo_dias: 130
+    notas: Hoy es una constante en 0 en config del ensamblado (data_pipeline.py). Automatizarla es la de menor prioridad del bloque exterior.
+
+  # --------------------------------------------------------------
+  # 5. Condiciones financieras — BCE
+  # --------------------------------------------------------------
+  - serie_id: bce_tipo_deposito
+    descripcion: Tipo de la facilidad de depósito del BCE
+    proveedor: BCE
+    id_origen: "FM.D.U2.EUR.4F.KR.DFR.LEV"
+    unidad: "% anual"
+    frecuencia_origen: D
+    agregacion: media
+    transformacion: nivel
+    columna_modelo: interest_rate_ecb
+    calendario_publicacion: "Tras cada reunión del Consejo de Gobierno del BCE"
+    retraso_maximo_dias: 10
+    notas: >
+      Solo se usa como observado en el histórico; en la proyección el tipo
+      del BCE lo endogeniza la regla de Taylor (Fase 5 del modelo, ver
+      config.py::DEFAULT_PARAMS ecb_*).
+
+  - serie_id: bce_euribor_3m
+    descripcion: EURIBOR a 3 meses (tipo corto doméstico para España)
+    proveedor: BCE
+    id_origen: "FM.M.U2.EUR.RT.MM.EURIBOR3MD_.HSTA (BCE Data Portal). Elegido 2026-09-19 por el usuario como tipo corto de interest_rate_spain, tras caerse la serie OCDE de letras (IR3TTS01ESM156N, 404). Es el tipo del mercado monetario del euro que siguen de cerca las Letras del Tesoro; sustituye al respaldo fijo 3,0 y a la columna congelada de series_mensuales.xlsx."
+    unidad: "% anual"
+    frecuencia_origen: M
+    agregacion: media
+    transformacion: nivel
+    columna_modelo: interest_rate_spain
+    calendario_publicacion: Mensual
+    retraso_maximo_dias: 40
+
+  - serie_id: eurostat_rendimiento_10y_espana
+    descripcion: Rendimiento bono a 10 años, España (criterio Maastricht)
+    proveedor: EUROSTAT
+    id_origen: "irt_lt_mcby_m, geo=ES"
+    unidad: "% anual"
+    frecuencia_origen: M
+    agregacion: media
+    transformacion: derivada
+    columna_modelo: null
+    calendario_publicacion: Mensual
+    retraso_maximo_dias: 40
+    notas: Insumo de risk_premium_spain junto con eurostat_rendimiento_10y_alemania (derivada = ES10Y - DE10Y, calculada en el ensamblado).
+
+  - serie_id: eurostat_rendimiento_10y_alemania
+    descripcion: Rendimiento bono a 10 años, Alemania (criterio Maastricht)
+    proveedor: EUROSTAT
+    id_origen: "irt_lt_mcby_m, geo=DE"
+    unidad: "% anual"
+    frecuencia_origen: M
+    agregacion: media
+    transformacion: derivada
+    columna_modelo: null
+    calendario_publicacion: Mensual
+    retraso_maximo_dias: 40
+    notas: Insumo de risk_premium_spain (ver eurostat_rendimiento_10y_espana).
+
+  - serie_id: bce_usd_eur
+    descripcion: Tipo de cambio USD/EUR de referencia
+    proveedor: BCE
+    id_origen: "EXR.D.USD.EUR.SP00.A"
+    unidad: USD por EUR
+    frecuencia_origen: D
+    agregacion: media
+    transformacion: nivel
+    columna_modelo: usd_eur_rate
+    calendario_publicacion: Diaria, días hábiles
+    retraso_maximo_dias: 10
+    notas: Sustituye a series_diarias.xlsx (congelado en 2025-06-16); usado para convertir el gas de USD/MMBtu a EUR/MWh.
+
+  # --------------------------------------------------------------
+  # 6. Energía — FRED (ya automatizadas, se reapuntan al almacén)
+  # --------------------------------------------------------------
+  - serie_id: fred_brent
+    descripcion: Petróleo Brent, spot, Europa
+    proveedor: FRED
+    id_origen: DCOILBRENTEU
+    unidad: USD/barril
+    frecuencia_origen: D
+    agregacion: media
+    transformacion: nivel
+    columna_modelo: oil_price_brent
+    calendario_publicacion: Diaria, días hábiles
+    retraso_maximo_dias: 7
+
+  - serie_id: fred_gas_eu
+    descripcion: Precio del gas natural, Europa (FMI, PCPS)
+    proveedor: FRED
+    id_origen: PNGASEUUSDM
+    unidad: USD/MMBtu (se convierte a EUR/MWh con bce_usd_eur)
+    frecuencia_origen: M
+    agregacion: media
+    transformacion: nivel
+    columna_modelo: gas_price_ttf
+    calendario_publicacion: "Con ~6 semanas de retraso, fuente FMI"
+    retraso_maximo_dias: 60
+    notas: >
+      ADVERTENCIA (ver riesgos del plan): esto es un precio medio de
+      importación del FMI, no el TTF holandés. Nombrado gas_price_ttf por
+      continuidad con el modelo actual; decisión pendiente de sustituir por
+      un índice TTF de publicación más rápida o renombrar la variable.
+
+  # --------------------------------------------------------------
+  # 7. Nowcast propio — repo hermano crisistrackerv2
+  # --------------------------------------------------------------
+  - serie_id: nowcast_pib_espana
+    descripcion: Estimación de nowcasting del crecimiento trimestral del PIB
+    proveedor: NOWCAST
+    id_origen: "crisistrackerv2/data/processed/tables/{t6.csv,t3.csv}"
+    unidad: "% t/t-1"
+    frecuencia_origen: Q
+    agregacion: null
+    transformacion: derivada
+    columna_modelo: gdp_real_spain
+    calendario_publicacion: Semanal, mientras no haya dato oficial INE
+    retraso_maximo_dias: null
+    notas: >
+      Todo lo que entregue este conector se escribe con estado='provisional'
+      y se sustituye solo cuando ine_pib_real_espana publique el trimestre
+      correspondiente (fase 4). Ruta relativa: si el repo hermano no existe,
+      el conector se omite sin error, igual que hoy.

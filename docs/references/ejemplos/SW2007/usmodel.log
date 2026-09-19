@@ -1,0 +1,15 @@
+Starting Dynare (version 5.5).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 40 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+The posterior mode file usmodel_mode has been generated using an older version of Dynare. It cannot be verified if it matches the present model. Proceed at your own risk.
+

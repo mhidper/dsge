@@ -1,0 +1,17 @@
+# Escenario CENTRAL (consenso): shock energético en curso y resolución gradual.
+# Crudo anclado a la senda EIA STEO (sep-2026). Editar aquí cambia la proyección
+# sin tocar código. 'senda' = valores trimestrales explícitos (se ajustan al
+# horizonte). 'rampa' = de 'desde' a 'hasta' en ~2/3 del horizonte y meseta
+# después. desde: ultimo = engancha al último valor observado.
+nombre: baseline
+descripcion: Consenso; shock energético en curso, resolución gradual (EIA STEO sep-2026).
+horizonte_referencia: 12
+exogenas:
+  oil_price_brent:    {tipo: senda, valores: [102, 95, 84, 74, 66, 64, 63, 63, 64, 65, 66, 67]}
+  gas_price_ttf:      {tipo: senda, valores: [58, 52, 46, 42, 38, 36, 34, 33, 32, 32, 32, 32]}
+  interest_rate_ecb:  {tipo: rampa, desde: 2.25,   hasta: 2.00}
+  risk_premium_spain: {tipo: rampa, desde: ultimo, hasta: 0.75}
+  output_gap_eu:      {tipo: rampa, desde: ultimo, hasta: 0.1}
+  output_gap_usa:     {tipo: rampa, desde: ultimo, hasta: 0.2}
+  output_gap_china:   {tipo: rampa, desde: ultimo, hasta: 0.1}
+  fiscal_impulse:     {tipo: rampa, desde: 0.3,    hasta: 0.1}

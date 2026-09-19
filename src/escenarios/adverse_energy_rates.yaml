@@ -1,0 +1,15 @@
+# Escenario ADVERSO: escalada geopolítica (cierre de Ormuz) y estanflación.
+# Recalibrado a sep-2026 (Brent ya en ~130): arranca por encima del mercado
+# actual y escala hacia 155-158 USD, con resolución lenta.
+nombre: adverse_energy_rates
+descripcion: Escalada geopolítica y estanflación; energía al alza, BCE sube, brechas negativas.
+horizonte_referencia: 12
+exogenas:
+  oil_price_brent:    {tipo: senda, valores: [112, 135, 155, 158, 150, 142, 135, 128, 122, 118, 115, 112]}
+  gas_price_ttf:      {tipo: senda, valores: [80, 98, 120, 125, 115, 105, 95, 86, 78, 73, 69, 66]}
+  interest_rate_ecb:  {tipo: rampa, desde: ultimo, hasta: 3.25}
+  risk_premium_spain: {tipo: rampa, desde: ultimo, hasta: 1.50}
+  output_gap_eu:      {tipo: rampa, desde: ultimo, hasta: -1.8}
+  output_gap_usa:     {tipo: rampa, desde: ultimo, hasta: -0.8}
+  output_gap_china:   {tipo: rampa, desde: ultimo, hasta: -1.0}
+  fiscal_impulse:     {tipo: rampa, desde: 0.1,    hasta: -0.3}

@@ -1,0 +1,13 @@
+# Escenario FAVORABLE: resolución rápida de la oferta energética y desinflación.
+nombre: favorable_disinflation
+descripcion: Resolución rápida de la oferta y desinflación; energía a la baja, BCE recorta.
+horizonte_referencia: 12
+exogenas:
+  oil_price_brent:    {tipo: senda, valores: [82, 72, 66, 63, 61, 60, 60, 60, 61, 62, 62, 63]}
+  gas_price_ttf:      {tipo: senda, valores: [38, 32, 28, 26, 25, 25, 25, 26, 27, 28, 28, 28]}
+  interest_rate_ecb:  {tipo: rampa, desde: ultimo, hasta: 1.75}
+  risk_premium_spain: {tipo: rampa, desde: ultimo, hasta: 0.50}
+  output_gap_eu:      {tipo: rampa, desde: ultimo, hasta: 0.7}
+  output_gap_usa:     {tipo: rampa, desde: ultimo, hasta: 0.6}
+  output_gap_china:   {tipo: rampa, desde: ultimo, hasta: 0.5}
+  fiscal_impulse:     {tipo: rampa, desde: 0.5,    hasta: 0.2}

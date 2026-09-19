@@ -1,0 +1,10 @@
+jupyter
+pandas
+numpy
+matplotlib
+scipy
+plotly
+pyyaml
+certifi
+reportlab
+openpyxl

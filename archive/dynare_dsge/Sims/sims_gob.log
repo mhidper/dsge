@@ -1,0 +1,11 @@
+Starting Dynare (version 5.5).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 9 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+

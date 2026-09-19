@@ -1,0 +1,375 @@
+Starting Dynare (version 5.5).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Substitution of endo leads >= 2: added 46 auxiliary variables and equations.
+Substitution of endo lags >= 2: added 16 auxiliary variables and equations.
+Substitution of exo lags: added 3 auxiliary variables and equations.
+Found 174 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : 1
+Equation number 2 : 0 : zynomin
+Equation number 3 : 0 : inflsae_core_nt
+Equation number 4 : 0 : zinflsae_core_nt
+Equation number 5 : 0 : inflsae_core_t
+Equation number 6 : 0 : zinflsae_core_t
+Equation number 7 : 0 : inflsae_resto
+Equation number 8 : 0 : zinflsae_resto
+Equation number 9 : 0 : inflsae_core
+Equation number 10 : 0 : inflsae
+Equation number 11 : 0 : inflIPC
+Equation number 12 : 0 : inflsae_core_anual
+Equation number 13 : 0 : inflsaeanual
+Equation number 14 : 0 : 14
+Equation number 15 : 0 : zi
+Equation number 16 : 0 : 16
+Equation number 17 : 0 : d_Ypot
+Equation number 18 : 0 : G
+Equation number 19 : 0 : d_Y_anual
+Equation number 20 : 0 : U
+Equation number 21 : 0 : Ubar
+Equation number 22 : 0 : gUbar
+Equation number 23 : 0 : u
+Equation number 24 : 0 : zu
+Equation number 25 : 0 : infla
+Equation number 26 : 0 : zinfla
+Equation number 27 : 0 : d_pmoil_mepco
+Equation number 28 : 0 : infle
+Equation number 29 : 0 : zinfle
+Equation number 30 : 0 : inflIPC4
+Equation number 31 : 0 : 31
+Equation number 32 : 0 : rlp
+Equation number 33 : 0 : bcu5
+Equation number 34 : 0 : bcu10
+Equation number 35 : 0 : delta_i
+Equation number 36 : 0 : delta_i_ext
+Equation number 37 : 0 : 37
+Equation number 38 : 0 : rer
+Equation number 39 : 0 : rer_pot
+Equation number 40 : 0 : drer_gap
+Equation number 41 : 0 : rer_gap
+Equation number 42 : 0 : 42
+Equation number 43 : 0 : zrlp
+Equation number 44 : 0 : rn
+Equation number 45 : 0 : zrn
+Equation number 46 : 0 : in
+Equation number 47 : 0 : i_desv
+Equation number 48 : 0 : drerus
+Equation number 49 : 0 : de
+Equation number 50 : 0 : rUSTbill90
+Equation number 51 : 0 : zdeus
+Equation number 52 : 0 : deusrm
+Equation number 53 : 0 : zdeusrm
+Equation number 54 : 0 : yx_emer
+Equation number 55 : 0 : zyx_emer
+Equation number 56 : 0 : yx_avan
+Equation number 57 : 0 : zyx_avan
+Equation number 58 : 0 : iUSTbill90
+Equation number 59 : 0 : ziUSTbill90
+Equation number 60 : 0 : embi_ch
+Equation number 61 : 0 : inflCPIUS
+Equation number 62 : 0 : zinflCPIUS
+Equation number 63 : 0 : inflnoUS
+Equation number 64 : 0 : zinflnoUS
+Equation number 65 : 0 : zembi_ch
+Equation number 66 : 0 : tdi
+Equation number 67 : 0 : tdi_fun
+Equation number 68 : 0 : px_fun
+Equation number 69 : 0 : pm_fun
+Equation number 70 : 0 : px_pcu_fun
+Equation number 71 : 0 : px_pnpcu_fun
+Equation number 72 : 0 : pm_oil_fun
+Equation number 73 : 0 : pm_pnoil_fun
+Equation number 74 : 0 : px
+Equation number 75 : 0 : px_pcu
+Equation number 76 : 0 : px_pnpcu
+Equation number 77 : 0 : zpx_pnpcu
+Equation number 78 : 0 : pm
+Equation number 79 : 0 : pm_oil
+Equation number 80 : 0 : pm_pnoil
+Equation number 81 : 0 : zpm_pnoil
+Equation number 82 : 0 : pcu
+Equation number 83 : 0 : pmoil
+Equation number 84 : 0 : zpmoil
+Equation number 85 : 0 : dtdi
+Equation number 86 : 0 : dpx
+Equation number 87 : 0 : dpx_pcu
+Equation number 88 : 0 : dpx_pnpcu
+Equation number 89 : 0 : dpm
+Equation number 90 : 0 : dpm_oil
+Equation number 91 : 0 : dpm_pnoil
+Equation number 92 : 0 : inflIPE
+Equation number 93 : 0 : GROWTH_EY0
+Equation number 94 : 0 : GROWTH_EY1
+Equation number 95 : 0 : GROWTH_EY2
+Equation number 96 : 0 : GROWTH_EY1LR
+Equation number 97 : 0 : GROWTH_EY2LR
+Equation number 98 : 0 : GROWTH_EY3LR
+Equation number 99 : 0 : GROWTH_EY4LR
+Equation number 100 : 0 : GROWTH_EY5LR
+Equation number 101 : 0 : GROWTH_EY6TO10LR
+Equation number 102 : 0 : PIE_EY0
+Equation number 103 : 0 : PIE_EY1
+Equation number 104 : 0 : 104
+Equation number 105 : 0 : inflsae_2
+Equation number 106 : 0 : Alimentos
+Equation number 107 : 0 : Energia
+Equation number 108 : 0 : IPC
+Equation number 109 : 0 : sum_inflUS
+
+
+
+STEADY-STATE RESULTS:
+
+dYnomin            		 0.00825
+d_Ypot             		 0.00825
+G                  		 0.00825
+d_Y_anual          		 0.033
+ynomin             		 0
+inflIPC            		 0
+inflIPC4           		 0
+inflsae            		 0
+inflsae_core       		 0
+inflsae_core_nt    		 0
+inflsae_core_t     		 0
+inflsae_resto      		 0
+inflsae_core_anual 		 0
+inflsaeanual       		 0
+infle              		 0
+infla              		 0
+Ubar               		 0.081
+u                  		 0
+U                  		 0.081
+gUbar              		 0
+Ubar_total         		 0.081
+zu                 		 0
+i                  		 0.04
+in                 		 0.04
+rlp                		 0
+bcu5               		 0
+bcu10              		 0
+rn                 		 0.01
+r                  		 0.01
+i_desv             		 0
+rer                		 0
+deus               		 0
+drerus             		 0
+deusrm             		 0
+de                 		 0
+drer               		 0
+yx_avan            		 0
+yx_emer            		 0
+iUSTbill90         		 0
+rUSTbill90         		 0
+inflCPIUS          		 0
+inflIPE            		 0
+inflnoUS           		 0
+embi_ch            		 0
+sum_inflUS         		 0
+tdi                		 0
+pcu                		 0
+pmoil              		 0
+px                 		 0
+px_pcu             		 0
+px_pnpcu           		 0
+pm                 		 0
+pm_oil             		 0
+pm_pnoil           		 0
+dtdi               		 0
+dpx                		 0
+dpx_pcu            		 0
+dpx_pnpcu          		 0
+dpm                		 0
+dpm_oil            		 0
+dpm_pnoil          		 0
+tdi_fun            		 0
+px_fun             		 0
+pm_fun             		 0
+px_pcu_fun         		 0
+px_pnpcu_fun       		 0
+pm_oil_fun         		 0
+pm_pnoil_fun       		 0
+delta_i            		 0
+delta_i_ext        		 0
+rer_gap            		 0
+rer_pot            		 0
+drer_gap           		 0
+d_pmoil_mepco      		 0
+zynomin            		 0
+zinfle             		 0
+zinfla             		 0
+zinflsae_core_nt   		 0
+zinflsae_core_t    		 0
+zinflsae_resto     		 0
+zi                 		 0
+zrn                		 0
+zrlp               		 0
+zdeus              		 0
+zdeusrm            		 0
+zyx_emer           		 0
+zyx_avan           		 0
+ziUSTbill90        		 0
+zembi_ch           		 0
+zinflCPIUS         		 0
+zinflnoUS          		 0
+zpx_pnpcu          		 0
+zpm_pnoil          		 0
+zpmoil             		 0
+GROWTH_EY0         		 0.033
+GROWTH_EY1         		 0.033
+GROWTH_EY2         		 0.033
+GROWTH_EY1LR       		 0.033
+GROWTH_EY2LR       		 0.033
+GROWTH_EY3LR       		 0.033
+GROWTH_EY4LR       		 0.033
+GROWTH_EY5LR       		 0.033
+GROWTH_EY6TO10LR   		 0.033
+PIE_EY0            		 0
+PIE_EY1            		 0
+inflsae_2          		 0
+Alimentos          		 0
+Energia            		 0
+IPC                		 0
+
+You did not declare endogenous variables after the estimation/calib_smoother command.
+Smoothed variables will be computed for the 109 endogenous variables
+of your model, this can take a long time ....
+
+
+Choose one of the following options:
+
+ [1] Consider all the endogenous variables.
+ [2] Consider all the observed endogenous variables.
+ [3] Stop Dynare and change the mod file.
+ [4] Consider all the endogenous and auxiliary variables.
+
+options [default is 1] =  1
+
+
+Initial value of the log posterior (or likelihood): 5885.0032
+                                            First-order      Norm of
+ Iter F-count            f(x)  Feasibility   optimality         step
+    0      68   -5.885003e+03    0.000e+00    8.911e-03
+    1     158   -5.885003e+03    0.000e+00    3.579e-03    1.282e-05
+    2     227   -5.885003e+03    0.000e+00    3.402e+00    8.404e-07
+
+<a href = "matlab: helpview('optim','feasible_better_objective','CSHelpWindow');">Feasible point with lower objective function value found</a>.
+
+
+<a href = "matlab: helpview('optim','local_min_poss_with_constr','CSHelpWindow');">Local minimum possible. Constraints satisfied</a>.
+
+fmincon stopped because the <a href = "matlab: helpview('optim','norm_curr_step_simple_fminconip','CSHelpWindow');">size of the current step</a> is less than
+the value of the <a href = "matlab: helpview('optim','step_size_tol','CSHelpWindow');">step size tolerance</a> and constraints are 
+satisfied to within the value of the <a href = "matlab: helpview('optim','constraint_tolerance','CSHelpWindow');">constraint tolerance</a>.
+
+<<a href = "matlab: createExitMsg({'optimlib:sqpLineSearch:Exit2basic','fmincon'},{'optimlib:sqpLineSearch:Exit2detailed','1.000000e-06','0.000000e+00','1.000000e-06'},true,true);;">stopping criteria details</a>>
+
+Final value of minus the log posterior (or likelihood):-5885.003200 
+
+POSTERIOR KERNEL OPTIMIZATION PROBLEM!
+ (minus) the hessian matrix at the "mode" is not positive definite!
+=> posterior variance of the estimated parameters are not positive.
+You should try to change the initial values of the parameters using
+the estimated_params_init block, or use another optimization routine.
+[Warning: The results below are most likely wrong!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\5.5\matlab\dynare_estimation_1.m', 318)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\5.5\matlab\dynare_estimation_1.m',318,0)">line 318</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\5.5\matlab\dynare_estimation.m', 118)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\5.5\matlab\dynare_estimation.m',118,0)">line 118</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('calculate_estimate.driver', 'C:\Users\Usuario\Documents\Github\DGSE\Modelo\+calculate_estimate\driver.m', 2271)" style="font-weight:bold">calculate_estimate.driver</a> (<a href="matlab: opentoline('C:\Users\Usuario\Documents\Github\DGSE\Modelo\+calculate_estimate\driver.m',2271,0)">line 2271</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\5.5\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\5.5\matlab\dynare.m',281,0)">line 281</a>)] 
+[Warning: Matrix is singular, close to singular or badly scaled. Results may be inaccurate. RCOND = NaN.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', 'C:\dynare\5.5\matlab\dynare_estimation_1.m', 341)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('C:\dynare\5.5\matlab\dynare_estimation_1.m',341,0)">line 341</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', 'C:\dynare\5.5\matlab\dynare_estimation.m', 118)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('C:\dynare\5.5\matlab\dynare_estimation.m',118,0)">line 118</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('calculate_estimate.driver', 'C:\Users\Usuario\Documents\Github\DGSE\Modelo\+calculate_estimate\driver.m', 2271)" style="font-weight:bold">calculate_estimate.driver</a> (<a href="matlab: opentoline('C:\Users\Usuario\Documents\Github\DGSE\Modelo\+calculate_estimate\driver.m',2271,0)">line 2271</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\5.5\matlab\dynare.m', 281)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\5.5\matlab\dynare.m',281,0)">line 281</a>)
+] 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+                     prior mean     mode    s.d.  prior pstdev
+
+a1                       0.1500   0.1352     NaN   beta 0.0400 
+a2                       0.0500   0.0535     NaN   beta 0.0300 
+a3                       0.0700   0.0503     NaN   beta 0.0200 
+a4                       0.0700   0.0523     NaN   beta 0.0200 
+a5                       0.0600   0.0434     NaN   beta 0.0200 
+a6                       0.0100   0.0069     NaN   beta 0.0050 
+a7                       0.0400   0.0113     NaN   beta 0.0200 
+rhoyresto                0.4000   0.3120     NaN   beta 0.1000 
+bnt1                     0.2000   0.1560     NaN   beta 0.0500 
+bnt2                     0.5000   0.4858     NaN   beta 0.1500 
+bnt3                     0.1000   0.0731     NaN   beta 0.0250 
+rho_zinflsae_core_nt     0.2000   0.1170     NaN   beta 0.1000 
+bt2                      0.7000   0.6373     NaN   beta 0.0750 
+bt3                      0.0200   0.0203     NaN   beta 0.0050 
+bt4                      0.0500   0.0388     NaN   beta 0.0100 
+bt5                      0.0200   0.0168     NaN   beta 0.0050 
+br1                      0.1000   0.1015     NaN   beta 0.0250 
+br2                      0.0500   0.0437     NaN   beta 0.0100 
+rho_inflsae_resto        0.5000   0.1697     NaN   beta 0.1800 
+rho_zinflsae_resto       0.2500   0.2331     NaN   beta 0.1800 
+std_Ubar                 0.0070   0.0012     NaN   invg    Inf 
+c3                       0.2000   0.2075     NaN   gamm 0.0500 
+c2                       1.7000   1.6267     NaN   norm 0.1000 
+c1                       0.8000   0.7968     NaN   beta 0.0500 
+rho1_yx_emer             0.8500   0.8676     NaN   beta 0.1000 
+rho1_yx_avan             0.8500   0.8992     NaN   beta 0.1000 
+rho1_embi_ch             0.7000   0.7855     NaN   beta 0.1000 
+rho1_inflnoUS            0.2500   0.2649     NaN   beta 0.1800 
+rho1_inflCPIUS           0.2500   0.0709     NaN   beta 0.1800 
+rho_pcu                  0.5000   0.7712     NaN   beta 0.1000 
+rho1_pmoil               0.6300   0.8132     NaN   beta 0.1500 
+rho_zpx_pnpcu            0.5000   0.5661     NaN   beta 0.1000 
+rho_zpm_pnoil            0.5000   0.4198     NaN   beta 0.1000 
+gap_infla                0.2500   0.3299     NaN   beta 0.1000 
+rho_infla                0.2500   0.3208     NaN   beta 0.1000 
+tita                     0.3500   0.2257     NaN   beta 0.0700 
+rhodeus                  0.3500   0.6355     NaN   beta 0.1000 
+
+standard deviation of shocks
+                     prior mean     mode    s.d.  prior pstdev
+
+zzsae_core_nt            0.0070   0.0015     NaN   invg    Inf 
+zzsae_core_nt_s          0.0070   0.0016     NaN   invg    Inf 
+zzsae_core_t             0.0070   0.0029     NaN   invg    Inf 
+zzsae_core_t_s           0.0070   0.0021     NaN   invg    Inf 
+zzsae_resto              0.0070   0.0091     NaN   invg    Inf 
+zzsae_resto_s            0.0070   0.0037     NaN   invg    Inf 
+zzIPCSAE                 0.0070   0.0015     NaN   invg    Inf 
+zzIPCSAEcore             0.0070   0.0009     NaN   invg    Inf 
+zzinflIPC                0.0070   0.0013     NaN   invg    Inf 
+zzUbar                   0.0070   0.0032     NaN   invg    Inf 
+zzynomin                 0.0070   0.0060     NaN   invg    Inf 
+zzi                      0.0070   0.0069     NaN   invg    Inf 
+zzdeus                   0.0080   0.0119     NaN   invg    Inf 
+zzinfla                  0.0070   0.0106     NaN   invg    Inf 
+zzinfle                  0.0070   0.0032     NaN   invg    Inf 
+zzyx_emer                0.0070   0.0133     NaN   invg    Inf 
+zzyx_avan                0.0070   0.0091     NaN   invg    Inf 
+zziUSTbill90             0.0070   0.0044     NaN   invg    Inf 
+zzembi_ch                0.0070   0.0031     NaN   invg    Inf 
+zzinflCPIUS              0.0070   0.0032     NaN   invg    Inf 
+zzinflIPE                0.0070   0.0321     NaN   invg    Inf 
+zzpcu                    0.0070   0.1409     NaN   invg    Inf 
+zzpmoil                  0.0070   0.1380     NaN   invg    Inf 
+zzpx                     0.0070   0.0121     NaN   invg    Inf 
+zzpx_pcu                 0.0070   0.0797     NaN   invg    Inf 
+zzpx_pnpcu               0.0070   0.0302     NaN   invg    Inf 
+zzpm                     0.0070   0.0257     NaN   invg    Inf 
+zzpm_oil                 0.0070   0.0823     NaN   invg    Inf 
+zzpm_pnoil               0.0070   0.0336     NaN   invg    Inf 
+zzmepco                  0.0070   0.0366     NaN   invg    Inf 
+
+
+Log data density [Laplace approximation] is NaN.
+

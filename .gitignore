@@ -1,16 +1,31 @@
-# Ignorar todo por defecto
-*
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-# Permitir solo estas carpetas específicas
+# SQLite journal and temporary files
+*.db-journal
+
+# Environments & IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Tt]humbs.db
+
+# Outputs that may be regenerated
+reports/figures/*.png
+
+# Keep core directories and documentation
 !src/
-!src/**
-!datos/
-!datos/**
-!sec3_3_1_structural_domestic_MSEP/
-!sec3_3_1_structural_domestic_MSEP/**
-
-# Permitir el archivo .gitignore
-!.gitignore
-
-# Opcional: permitir README si tienes uno
+!data/
+!docs/
+!notebooks/
+!reports/
+!archive/
+!run_forecast.py
 !README.md
+!requirements.txt
+!AUDITORIA_Y_PLAN_MIGRACION_MECPOL.md
+!.gitignore
