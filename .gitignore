@@ -14,6 +14,9 @@ Thumbs.db
 ehthumbs.db
 [Tt]humbs.db
 
+# Conversaciones de trabajo
+conversaciones/
+
 # Outputs that may be regenerated
 reports/figures/*.png
 
