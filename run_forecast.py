@@ -140,11 +140,15 @@ def main():
     pdf_file = None
     try:
         from src.pdf_generator import build_pdf_report
+        import shutil
         pdf_file = build_pdf_report(
             df_history=df_hist,
             df_forecast=scenario_dfs[target_scenario],
             scenario_name=target_scenario
         )
+        if pdf_file and pdf_file.exists():
+            docs_pdf = PROJECT_ROOT / "docs" / pdf_file.name
+            shutil.copy(pdf_file, docs_pdf)
     except Exception as e:
         print(f"   * Aviso al generar informe PDF: {e}")
 
