@@ -96,25 +96,23 @@ def plot_forecast_dashboard(df_history: pd.DataFrame,
 
     # 3. Tasa de Paro
     ax3 = axes[1, 0]
+    last_usa_val = hist_tail['unemployment_rate_sa'].iloc[-1] if 'unemployment_rate_sa' in hist_tail.columns else hist_tail['unemployment_rate'].iloc[-1]
+    b_usa = attach_anchor(last_usa_val, forecast_bands['unemployment_rate_sa'])
     last_u_val = hist_tail['unemployment_rate'].iloc[-1]
     b_u = attach_anchor(last_u_val, forecast_bands['unemployment_rate'])
 
-    ax3.plot(hist_tail.index, hist_tail['unemployment_rate'], label='EPA Observada', color='#9467bd', lw=2.2)
-    ax3.plot(proj_dates, b_u['central'], label='Previsión (con estacionalidad)', color='#8c564b', lw=2.5)
-    ax3.fill_between(proj_dates, b_u['p10'], b_u['p90'], color='#8c564b', alpha=0.15, label='IC 80%')
-    ax3.fill_between(proj_dates, b_u['p25'], b_u['p75'], color='#8c564b', alpha=0.25, label='IC 50%')
+    # Histórico EPA y Tendencia desestacionalizada
+    ax3.plot(hist_tail.index, hist_tail['unemployment_rate'], label='EPA Observada', color='#9467bd', lw=1.8, alpha=0.7)
+    if 'unemployment_rate_sa' in hist_tail.columns:
+        ax3.plot(hist_tail.index, hist_tail['unemployment_rate_sa'], color='#555555', lw=1.6, linestyle='--', label='Tendencia (SA)')
 
-    # Tendencia desestacionalizada / NAIRU
-    if 'unemployment_rate_sa' in forecast_bands and 'unemployment_rate_sa' in hist_tail.columns:
-        last_usa_val = hist_tail['unemployment_rate_sa'].iloc[-1]
-        b_usa = attach_anchor(last_usa_val, forecast_bands['unemployment_rate_sa'])
-        ax3.plot(hist_tail.index, hist_tail['unemployment_rate_sa'], color='#7f7f7f', lw=1.5, linestyle='--', label='Tendencia (SA)')
-        ax3.plot(proj_dates, b_usa['central'], color='#7f7f7f', lw=1.8, linestyle='--', label='Tendencia Proyectada')
-    elif 'nairu' in forecast_bands and 'nairu' in hist_tail.columns:
-        last_n_val = hist_tail['nairu'].iloc[-1]
-        b_n = attach_anchor(last_n_val, forecast_bands['nairu'])
-        ax3.plot(hist_tail.index, hist_tail['nairu'], color='#7f7f7f', lw=1.5, linestyle=':', label='NAIRU')
-        ax3.plot(proj_dates, b_n['central'], color='#7f7f7f', lw=1.8, linestyle=':', label='NAIRU Estructural')
+    # Tendencia Proyectada como eje central de las bandas de precisión
+    ax3.plot(proj_dates, b_usa['central'], label='Tendencia Proyectada (SA)', color='#8c564b', lw=2.5)
+    ax3.fill_between(proj_dates, b_usa['p10'], b_usa['p90'], color='#8c564b', alpha=0.15, label='IC 80% (Tendencia)')
+    ax3.fill_between(proj_dates, b_usa['p25'], b_usa['p75'], color='#8c564b', alpha=0.25, label='IC 50% (Tendencia)')
+
+    # Senda trimestral proyectada con estacionalidad EPA
+    ax3.plot(proj_dates, b_u['central'], label='Previsión EPA (con estacionalidad)', color='#e377c2', lw=1.6, linestyle=':')
 
     ax3.axvline(last_date, color='gray', linestyle=':', lw=1.2, alpha=0.8)
     ax3.set_title("Tasa de Desempleo (% Población Activa)", fontweight='bold', fontsize=12)
