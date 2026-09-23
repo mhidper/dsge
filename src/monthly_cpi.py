@@ -394,13 +394,16 @@ def plot_monthly_cpi_dashboard(
     ax1.set_ylabel("%")
     ax1.legend(loc='upper right', frameon=True)
 
-    # --- PANEL 2: Desglose por Componentes ---
-    ax2.plot(df_past.index, df_past['inflation_energy'], color='#9467bd', lw=2.2, label='IPC Energía (% i.a.)')
-    ax2.plot(proj_dates, proj_ene, color='#9467bd', lw=2.0, linestyle=':')
+    # --- PANEL 2: Desglose por Componentes (Energía en Eje Secundario Derecho) ---
+    ax2_right = ax2.twinx()
+
+    # Serie de energía en eje secundario derecho
+    l_ene1 = ax2_right.plot(df_past.index, df_past['inflation_energy'], color='#9467bd', lw=2.2, label='IPC Energía (% i.a.) [Eje Der.]')
+    ax2_right.plot(proj_dates, proj_ene, color='#9467bd', lw=2.0, linestyle=':')
 
     # Pico de energía
-    ax2.scatter([peak_date], [peak_ene], color='#9467bd', s=90, zorder=6)
-    ax2.annotate(
+    ax2_right.scatter([peak_date], [peak_ene], color='#9467bd', s=90, zorder=6)
+    ax2_right.annotate(
         f"Pico Energía: {peak_ene:.1f}%\n(Crudo Brent sept. ~110$)",
         xy=(peak_date, peak_ene),
         xytext=(18, 6), textcoords='offset points',
@@ -408,28 +411,41 @@ def plot_monthly_cpi_dashboard(
         fontweight='bold', fontsize=9,
         bbox=dict(boxstyle="round,pad=0.3", fc="#f3e5f5", ec="#9467bd", lw=1.1)
     )
-    ax2.set_ylim(-8.0, 28.0)
+    ax2_right.set_ylabel("IPC Energía (% i.a.)", color='#9467bd', fontweight='bold', fontsize=10.5)
+    ax2_right.tick_params(axis='y', labelcolor='#9467bd')
+    ax2_right.grid(False)
+    ax2_right.set_ylim(-8.0, 28.0)
 
+    # Componentes regulares en eje izquierdo (Alimentos, Servicios, Bienes)
+    lines_left = []
     if 'inflation_food' in df_past.columns:
-        ax2.plot(df_past.index, df_past['inflation_food'], color='#2ca02c', lw=1.8, label='IPC Alimentos (% i.a.)')
+        l_food = ax2.plot(df_past.index, df_past['inflation_food'], color='#2ca02c', lw=1.8, label='IPC Alimentos (% i.a.)')
         ax2.plot(proj_dates, [df_past['inflation_food'].iloc[-1]] + list(df_fore['inflation_food'].values),
                  color='#2ca02c', lw=1.6, linestyle=':')
+        lines_left.append(l_food[0])
 
     if 'inflation_services' in df_past.columns:
-        ax2.plot(df_past.index, df_past['inflation_services'], color='#1f77b4', lw=1.8, linestyle='--', label='IPC Servicios (% i.a.)')
+        l_serv = ax2.plot(df_past.index, df_past['inflation_services'], color='#1f77b4', lw=1.8, linestyle='--', label='IPC Servicios (% i.a.)')
         ax2.plot(proj_dates, [df_past['inflation_services'].iloc[-1]] + list(df_fore['inflation_services'].values),
                  color='#1f77b4', lw=1.6, linestyle=':')
+        lines_left.append(l_serv[0])
 
     if 'inflation_goods' in df_past.columns:
-        ax2.plot(df_past.index, df_past['inflation_goods'], color='#8c564b', lw=1.8, linestyle='-.', label='IPC Bienes Industriales (% i.a.)')
+        l_goods = ax2.plot(df_past.index, df_past['inflation_goods'], color='#8c564b', lw=1.8, linestyle='-.', label='IPC Bienes Industriales (% i.a.)')
         ax2.plot(proj_dates, [df_past['inflation_goods'].iloc[-1]] + list(df_fore['inflation_goods'].values),
                  color='#8c564b', lw=1.6, linestyle=':')
+        lines_left.append(l_goods[0])
 
     ax2.axvline(last_past_date, color='gray', linestyle=':', lw=1.2, alpha=0.8)
     ax2.axhline(0.0, color='gray', linestyle='--', lw=0.8)
     ax2.set_title("Desglose Mensual por Componentes de la Inflación (INE + Proyección)", fontweight='bold', fontsize=12)
-    ax2.set_ylabel("%")
-    ax2.legend(loc='upper right', frameon=True)
+    ax2.set_ylabel("Alimentos, Servicios y Bienes (% i.a.)", fontweight='bold', fontsize=10.5)
+    ax2.set_ylim(-2.0, 10.0)
+
+    # Leyenda consolidada en ax2
+    all_lines = lines_left + [l_ene1[0]]
+    all_labels = [l.get_label() for l in all_lines]
+    ax2.legend(all_lines, all_labels, loc='upper left', frameon=True, fontsize=8.5)
 
     ax2.xaxis.set_major_locator(mdates.MonthLocator(interval=3))
     ax2.xaxis.set_major_formatter(mdates.DateFormatter('%b-%Y'))
