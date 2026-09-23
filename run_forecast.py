@@ -148,6 +148,20 @@ def main():
     except Exception as e:
         print(f"   * Aviso al generar informe PDF: {e}")
 
+    # 4d. Exportación de datos para el Portal Web Interactivo (GitHub Pages / Lieflat Charts)
+    web_json_path = None
+    try:
+        from src.export_web_data import export_forecast_to_json
+        m_scenarios = monthly_scenarios_dfs if 'monthly_scenarios_dfs' in locals() else None
+        web_json_path = export_forecast_to_json(
+            df_history=df_hist,
+            scenario_dfs=scenario_dfs,
+            forecast_bands=bands,
+            monthly_scenarios_dfs=m_scenarios
+        )
+    except Exception as e:
+        print(f"   * Aviso al exportar datos web interactivos: {e}")
+
     print("\n" + "=" * 65)
     print("[OK] SIMULACION Y PREVISION COMPLETADAS CON EXITO")
     print("=" * 65)
